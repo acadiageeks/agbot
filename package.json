@@ -9,6 +9,7 @@
   "author": "Tom Heinan",
   "license": "ISC",
   "dependencies": {
-    "@slack/bolt": "^3.12.1"
+    "@slack/bolt": "^3.12.1",
+    "dotenv": "^16.0.2"
   }
 }
