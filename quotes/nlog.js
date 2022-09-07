@@ -1,5 +1,6 @@
 import Postgres from 'pg'
 import * as dotenv from 'dotenv';
+import convertNum from 'number-to-words';
 
 dotenv.config();
 
@@ -56,7 +57,7 @@ export async function nlog(event, client, respond, logger) {
 
     await pool.query('INSERT INTO quotes (content) VALUES ($1)', [quote]);
 
-    var responseText = `Logged ${numberOfLines} `;
+    var responseText = `Logged ${convertNum.toWords(numberOfLines)} `;
     responseText += numberOfLines == 1 ? 'line.' : 'lines.';
     responseText += '\n' + "```" + quote + "```";
     await client.chat.postMessage({

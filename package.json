@@ -12,6 +12,7 @@
   "dependencies": {
     "@slack/bolt": "^3.12.1",
     "dotenv": "^16.0.2",
+    "number-to-words": "^1.2.4",
     "pg": "^8.8.0"
   }
 }
