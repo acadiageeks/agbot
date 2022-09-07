@@ -2,6 +2,7 @@ import * as dotenv from 'dotenv';
 import Bolt from '@slack/bolt';
 
 import { logMessage } from './logger/log-message.js';
+import { nlog } from './quotes/nlog.js'
 
 dotenv.config();
 
@@ -16,6 +17,11 @@ const app = new Bolt.App({
 app.event('message', async ({ event, client, logger }) => {
   if (event.subtype !== undefined) { return; } // ignore edits, system messages, etc.
   await logMessage(event, client, logger);
+});
+
+app.command('/nlog', async ({ ack, body, client, respond, logger }) => {
+  await ack();
+  await nlog(body, client, respond, logger);
 });
 
 // start listening
