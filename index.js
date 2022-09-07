@@ -12,12 +12,13 @@ const app = new Bolt.App({
   socketMode: true
 });
 
+// log all messages to channels we're in
 app.event('message', async ({ event, client, logger }) => {
   if (event.subtype !== undefined) { return; } // ignore edits, system messages, etc.
-
   await logMessage(event, client, logger);
 });
 
+// start listening
 (async () => {
   await app.start();
 })();
