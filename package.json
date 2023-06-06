@@ -1,18 +1,25 @@
 {
   "name": "agbot",
-  "version": "2.0.0",
+  "version": "3.1.0",
   "description": "The Acadia Geeks Slack bot",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bot": "node -r dotenv/config index.js | pino-pretty",
+    "console": "node -r dotenv/config --experimental-repl-await bin/console.js"
   },
   "author": "Tom Heinan",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@slack/bolt": "^3.12.1",
-    "dotenv": "^16.0.2",
+    "@slack/bolt": "^3.13.1",
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
     "number-to-words": "^1.2.4",
-    "pg": "^8.8.0"
+    "pg": "^8.8.0",
+    "pg-native": "^3.0.1",
+    "pino": "^8.14.1"
+  },
+  "devDependencies": {
+    "pino-pretty": "^10.0.0"
   }
 }
