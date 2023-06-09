@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "bot": "node -r dotenv/config index.js | pino-pretty",
+    "dev": "node -r dotenv/config index.js | pino-pretty",
     "console": "node -r dotenv/config --experimental-repl-await bin/console.js"
   },
   "author": "Tom Heinan",
@@ -15,6 +15,7 @@
     "discord.js": "^14.11.0",
     "dotenv": "^16.0.3",
     "number-to-words": "^1.2.4",
+    "openai": "^3.2.1",
     "pg": "^8.8.0",
     "pg-native": "^3.0.1",
     "pino": "^8.14.1"
