@@ -1,6 +1,11 @@
 import * as repl from 'repl'
 import * as vm from 'vm'
 
-repl.start().context = vm.createContext({
-  //registerCommands: registerCommands,
-})
+import { functionLibrary } from '../lib/function-library.js';
+
+(async () => {
+  const functions = await functionLibrary();
+  repl.start().context = vm.createContext({
+    functions: functions,
+  });
+})();

@@ -11,6 +11,7 @@
   "author": "Tom Heinan",
   "license": "MIT",
   "dependencies": {
+    "@googlemaps/google-maps-services-js": "^3.3.35",
     "axios": "^1.4.0",
     "discord.js": "^14.12.1",
     "dotenv": "^16.0.3",
