@@ -1,6 +1,6 @@
 {
   "name": "agbot",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "The Acadia Geeks Slack bot",
   "main": "index.js",
   "type": "module",
@@ -13,15 +13,16 @@
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.35",
     "axios": "^1.4.0",
+    "core-js": "^3.6.5",
     "discord.js": "^14.12.1",
     "dotenv": "^16.0.3",
     "number-to-words": "^1.2.4",
-    "openai": "^3.2.1",
+    "openai": "^4.47.0",
     "pg": "^8.8.0",
     "pg-native": "^3.0.1",
-    "pino": "^8.14.1"
+    "pino": "^9.1.0"
   },
   "devDependencies": {
-    "pino-pretty": "^10.0.0"
+    "pino-pretty": "^11.0.0"
   }
 }
