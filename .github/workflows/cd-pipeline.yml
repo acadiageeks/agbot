@@ -30,6 +30,6 @@ jobs:
           script: |
             cd ~/code/agbot
             /home/tom/.asdf/shims/pm2 stop agbot
-            zsh -ic "cd ~/code/agbot && git pull"
+            /usr/bin/git pull
             /home/tom/.asdf/shims/npm ci
             /home/tom/.asdf/shims/pm2 start agbot
