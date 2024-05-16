@@ -29,7 +29,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ~/code/agbot
-            pm2 stop agbot
+            /home/tom/.asdf/shims/pm2 stop agbot
             /usr/bin/git pull
-            npm ci
-            start agbot
+            /home/tom/.asdf/shims/npm ci
+            /home/tom/.asdf/shims/pm2pm2 start agbot
