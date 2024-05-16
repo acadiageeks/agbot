@@ -2,10 +2,10 @@
   "name": "agbot",
   "version": "3.5.0",
   "description": "The Acadia Geeks Slack bot",
-  "main": "index.js",
+  "main": "app.js",
   "type": "module",
   "scripts": {
-    "dev": "node -r dotenv/config index.js | pino-pretty",
+    "dev": "node -r dotenv/config app.js | pino-pretty",
     "console": "node -r dotenv/config --experimental-repl-await bin/console.js"
   },
   "author": "Tom Heinan",
