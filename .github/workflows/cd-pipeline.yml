@@ -27,4 +27,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: chmod +x ~/code/agbot/bin/update.sh && ~/code/agbot/bin/update.sh
+          script: |
+            cd ~/code/agbot
+            pm2 stop agbot
+            git pull
+            npm ci
+            pm2 start agbot
