@@ -1,6 +1,6 @@
 {
   "name": "agbot",
-  "version": "3.8.0",
+  "version": "3.8.1",
   "description": "The Acadia Geeks Slack bot",
   "main": "app.js",
   "type": "module",
@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {
     "@googlemaps/google-maps-services-js": "^3.3.35",
+    "async-get-file": "^1.0.4",
     "axios": "^1.4.0",
     "better-sqlite3": "^11.5.0",
     "core-js": "^3.6.5",
